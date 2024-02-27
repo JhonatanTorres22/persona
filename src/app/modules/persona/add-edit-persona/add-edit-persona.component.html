@@ -1,1 +1,79 @@
-<p>add-edit-persona works!</p>
+<form action="" [formGroup]="formPersona">
+    <h2 mat-dialog-title> {{operacion}} </h2>
+
+    <mat-dialog-content>
+
+        <div class="d-flex gap-2">
+            <mat-form-field class="formulario">
+                <mat-label>NOMBRES</mat-label>
+                <input matInput formControlName="nombres">
+                <mat-error *ngIf="formPersona.get('nombres')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="formulario">
+                <mat-label>APELLIDO PATERNO</mat-label>
+                <input matInput formControlName="apellidoPaterno">
+                <mat-error *ngIf="formPersona.get('apellidoPaterno')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="d-flex gap-2">
+            <mat-form-field class="formulario">
+                <mat-label>APELLIDO MATERNO</mat-label>
+                <input matInput formControlName="apellidoMaterno">
+                <mat-error *ngIf="formPersona.get('apellidoMaterno')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="formulario">
+                <mat-label>DNI</mat-label>
+                <input matInput formControlName="nDocumento">
+                <mat-error *ngIf="formPersona.get('nDocumento')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+        </div>
+
+
+        <div class="d-flex gap-2">
+            <mat-form-field class="formulario">
+                <mat-label>TELEFONO</mat-label>
+                <input matInput formControlName="telFijo">
+                <mat-error *ngIf="formPersona.get('telFijo')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="formulario">
+                <mat-label>CELULAR</mat-label>
+                <input matInput formControlName="telCelular">
+                <mat-error *ngIf="formPersona.get('telCelular')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+        </div>
+
+        <mat-form-field class="formulario">
+            <mat-label>CORREO ELECTRONICO</mat-label>
+            <input matInput formControlName="correoElectronico">
+            <mat-error *ngIf="formPersona.get('correoElectronico')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+        </mat-form-field>
+
+        <div class="d-flex gap-2">
+    
+            <mat-form-field class="formulario">
+                <mat-label>NOMBRE DE USUARIO</mat-label>
+                <input matInput formControlName="nombreUsuario">
+                <mat-error *ngIf="formPersona.get('nombreUsuario')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error>
+            </mat-form-field>
+            <mat-form-field class="formulario" *ngIf="modoAgregando">
+                <mat-label>CONTRASEÑA</mat-label>
+                <input matInput formControlName="contrasenia">
+                <!-- <mat-error *ngIf="formPersona.get('contrasenia')?.hasError('required')">ESTE CAMPO ES REQUERIDO</mat-error> -->
+    
+            </mat-form-field>
+        </div>
+
+
+
+    </mat-dialog-content>
+
+
+    <mat-dialog-actions align="end">
+        <button mat-raised-button color="warn" (click)="add_edit()" [disabled]="formPersona.invalid"> GUARDAR </button>
+        <button mat-raised-button mat-dialog-close> CANCELAR </button>
+    </mat-dialog-actions>
+</form>
