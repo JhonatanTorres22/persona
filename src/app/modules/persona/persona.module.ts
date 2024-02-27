@@ -4,6 +4,15 @@ import { CommonModule } from '@angular/common';
 import { PersonaRoutingModule } from './persona-routing.module';
 import { ListarPersonaComponent } from './listar-persona/listar-persona.component';
 import { AddEditPersonaComponent } from './add-edit-persona/add-edit-persona.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+//angular material
+import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -14,6 +23,15 @@ import { AddEditPersonaComponent } from './add-edit-persona/add-edit-persona.com
   imports: [
     CommonModule,
     PersonaRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+    MatDialogModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
   ],
   exports : [
     ListarPersonaComponent

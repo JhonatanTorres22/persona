@@ -1,4 +1,4 @@
-import { AgregarPersonaDTO, ListarPersonDTO } from "src/app/arquitectura/dto-persona/persona.dto";
+import { AgregarPersonaDTO, ListarPersonDTO } from "src/app/infraestructura/dto-persona/persona.dto";
 import { AgregarPersona, ListarPersona } from "../models/persona.model";
 
 export class PersonaMapper {
