@@ -1,4 +1,6 @@
+
 <button class="mb-2" mat-raised-button color="primary" (click)="abrirModalAddEditPersona(listaDePersona,1)">AGREGAR</button>
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
 
 <table mat-table [dataSource]="listarPersona" class="mat-elevation-z8">
 
@@ -32,8 +34,10 @@
       <ng-container matColumnDef="acciones">
         <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
         <td mat-cell *matCellDef="let element"> 
+          <button (click)="asignarRol(element)"> ASIGNAR ROL </button>
           <button class="editar"><i class="fas fa-pencil" (click)="abrirModalAddEditPersona(element,2)" matTooltip="Editar"></i></button>
           <button class="eliminar"><i class="fas fa-trash" (click)="eliminarPersona(element)" matTooltip="Editar"></i></button>
+
         </td>
       </ng-container>
   
