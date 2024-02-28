@@ -101,7 +101,6 @@ export class ListarPersonaComponent implements OnInit {
     this.router.navigate(['/mf-rol']).then(() => {
       setTimeout(() => {
         const evento = new CustomEvent('abrirModal', {detail:{mensaje: persona}});  
-        // const abrirModal = new CustomEvent('abriendoModal' , {detail:{menaje:}})
         window.dispatchEvent(evento);
         console.log('abriendo el modal');
       }, 400);
