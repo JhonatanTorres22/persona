@@ -6,7 +6,6 @@ import { PersonaService } from 'src/app/infraestructura/services/persona.service
 import { AddEditPersonaComponent } from '../add-edit-persona/add-edit-persona.component';
 import Swal from 'sweetalert2';
 import { ComunicacionService } from './servicio-compartido/comunicacion.service';
-import { AddEditUsuarioConRolComponent } from '../../../../../../../rol/mf-rol/src/app/modules/rol/add-edit-usuario-con-rol/add-edit-usuario-con-rol.component'
 import { Route, Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
 
